@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Lacrosse Analytics — Ella L'Esperance</title>
+  <meta name="description" content="NCAA D3 Women's Lacrosse analytics: EDA, clustering, and interactive dashboards."/>
+  <meta name="keywords" content="Lacrosse Analytics, NCAA D3, Sports Analytics, Data Visualization, Tableau, Python, Statistical Analysis, Women's Lacrosse, Sports Data">
+  <meta name="author" content="Ella L'Esperance">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://codebyellalesperance.github.io/projects/lacrosse-analytics.html">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="/images/Untitled.jpeg">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Lacrosse Analytics Research",
+    "description": "NCAA D3 Women's Lacrosse analytics with EDA, clustering, and interactive dashboards",
+    "creator": {
+      "@type": "Person",
+      "name": "Ella L'Esperance"
+    },
+    "dateCreated": "2024",
+    "inLanguage": "en",
+    "about": {
+      "@type": "Thing",
+      "name": "Sports Analytics"
+    },
+    "keywords": ["Lacrosse Analytics", "NCAA D3", "Sports Data", "Tableau", "Python", "Statistical Analysis"],
+    "genre": "Research Project",
+    "educationalLevel": "Undergraduate",
+    "learningResourceType": "Project"
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-content">
+      <div class="logo">Ella L'Esperance</div>
+      <ul class="nav-links">
+        <li><a href="/index.html#home" class="nav-link">Home</a></li>
+        <li><a href="/index.html#about" class="nav-link">About</a></li>
+        <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container" style="display:grid;gap:2rem;grid-template-columns:280px minmax(0,1fr);">
+    <aside class="meta" style="position:sticky;top:84px;align-self:start">
+      <div class="kicker">Sports Analytics</div>
+      <div class="rule"></div>
+      <dl>
+        <dt>League</dt><dd>NCAA Division III (Women's)</dd>
+        <dt>Season</dt><dd>2024–2025 (historical seasons for context)</dd>
+        <dt>Role</dt><dd>Data Analyst & Developer</dd>
+        <dt>Stack</dt><dd>Python (pandas, scikit-learn), Tableau, Selenium</dd>
+      </dl>
+    </aside>
+
+    <article>
+      <h1 style="font-size:clamp(42px,8vw,112px);line-height:.88;max-width:16ch;color:var(--navy)">
+        Women's Lacrosse Analytics
+      </h1>
+      <p class="kicker">Research Overview</p>
+      <div class="rule"></div>
+      <p class="lede" style="font:italic 400 19px/1.7 'Crimson Text',serif;color:rgba(10,10,10,.7)">
+        I analyzed D3 women's lacrosse team and individual stats to uncover what most strongly correlates with wins,
+        then built dashboards coaches and players can actually use.
+      </p>
+
+      <section class="section">
+        <h2 class="section-title">The Question</h2>
+        <p>Which stats best predict win percentage? How do team archetypes differ (pace, defense-first, efficiency)?</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Data & Methods</h2>
+        <ul>
+          <li><strong>Collection:</strong> Selenium scraping from NCAA/3rd-party stat sites; CSV normalization.</li>
+          <li><strong>EDA:</strong> Correlation analysis; goals/game surfaced as strongest predictor of win%.</li>
+          <li><strong>Clustering:</strong> KMeans on standardized team features to identify archetypes.</li>
+          <li><strong>Viz:</strong> Tableau dashboards for coaches/players; interactive filters by team, season, position.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Key Findings</h2>
+        <ul>
+          <li>Goals per game had the strongest correlation with win percentage; ground balls had the weakest.</li>
+          <li>Archetypes emerged (e.g., high-tempo offenses vs. low-tempo, defense-anchored teams).</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Dashboards</h2>
+        <p>Open the dashboards in a modal for quick preview, or full-screen in a new tab.</p>
+        <button class="btn" data-modal-target="#dashModal">Preview Dashboards</button>
+        <a class="btn btn--primary" href="https://your-tableau-link" target="_blank" rel="noopener">Open Full Screen</a>
+
+        <!-- Modal -->
+        <div id="dashModal" class="modal" hidden>
+          <div class="modal__panel">
+            <button class="modal__close" data-modal-close>&times;</button>
+            <iframe src="https://your-embedded-dashboard" title="Lacrosse Dashboard" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Outcome</h2>
+        <p>Delivered dashboards and a write-up used for a final data analysis project; set groundwork for future player-level models.</p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">© 2024 Ella L'Esperance. All rights reserved.</p>
+  </footer>
+
+  <script src="/assets/js/modal.js" defer></script>
+</body>
+</html>

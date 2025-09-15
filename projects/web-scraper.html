@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Web Scraper Pipeline — Ella L'Esperance</title>
+  <meta name="description" content="Headless Selenium + Python pipeline with dedupe, schema, and export for analytics."/>
+  <meta name="keywords" content="Web Scraping, Data Engineering, Python, Selenium, Data Pipeline, Automation, GitHub Actions, Sports Data">
+  <meta name="author" content="Ella L'Esperance">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://codebyellalesperance.github.io/projects/web-scraper.html">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="/images/Untitled.jpeg">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Web Scraper Pipeline",
+    "description": "Headless Selenium + Python pipeline with dedupe, schema, and export for analytics",
+    "creator": {
+      "@type": "Person",
+      "name": "Ella L'Esperance"
+    },
+    "dateCreated": "2024",
+    "inLanguage": "en",
+    "about": {
+      "@type": "Thing",
+      "name": "Data Engineering"
+    },
+    "keywords": ["Web Scraping", "Data Pipeline", "Python", "Selenium", "Automation", "Data Engineering"],
+    "genre": "Technical Project",
+    "educationalLevel": "Undergraduate",
+    "learningResourceType": "Project"
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-content">
+      <div class="logo">Ella L'Esperance</div>
+      <ul class="nav-links">
+        <li><a href="/index.html#home" class="nav-link">Home</a></li>
+        <li><a href="/index.html#about" class="nav-link">About</a></li>
+        <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container" style="display:grid;gap:2rem;grid-template-columns:280px minmax(0,1fr);">
+    <aside class="meta" style="position:sticky;top:84px;align-self:start">
+      <div class="kicker">Data Engineering</div>
+      <div class="rule"></div>
+      <dl>
+        <dt>Goal</dt><dd>Reliable data extraction for sports analytics and research</dd>
+        <dt>Stack</dt><dd>Python, Selenium, Requests, pandas, SQLite/CSV</dd>
+        <dt>Runtime</dt><dd>GitHub Actions / CRON friendly</dd>
+        <dt>Outputs</dt><dd>Normalized CSV & SQLite with versioning</dd>
+      </dl>
+    </aside>
+
+    <article>
+      <h1 style="font-size:clamp(42px,8vw,112px);line-height:.88;max-width:16ch;color:var(--navy)">
+        Web Scraper Pipeline
+      </h1>
+      <p class="kicker">Pipeline Overview</p>
+      <div class="rule"></div>
+
+      <section class="section">
+        <h2 class="section-title">Problem</h2>
+        <p>Public stats sites rate-limit and change markup. I needed a resilient scraper with schema-first exports so my analysis doesn't break.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Approach</h2>
+        <ul>
+          <li><strong>Headless browser:</strong> Selenium for JS-rendered content; Requests for simple pages.</li>
+          <li><strong>Anti-fragility:</strong> user-agent rotation, polite delays, and selectors guarded by try/catch.</li>
+          <li><strong>Schema:</strong> column validation with dtype coercion; null handling; idempotent writes.</li>
+          <li><strong>Storage:</strong> CSV + SQLite snapshot each run; dedupe on primary keys.</li>
+          <li><strong>Automation:</strong> CLI entrypoint; can run via GitHub Actions or cron.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Example Code</h2>
+<pre><code class="language-python">
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+import pandas as pd, time
+
+def fetch_table(url):
+    opts = Options(); opts.add_argument("--headless=new")
+    with webdriver.Chrome(options=opts) as d:
+        d.get(url); time.sleep(1.2)
+        rows = [r.text.split() for r in d.find_elements("css selector","table tbody tr")]
+    df = pd.DataFrame(rows)  # clean + coerce schema below
+    return df
+</code></pre>
+        <p><em>Full repo link here when public.</em></p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Result</h2>
+        <p>Repeatable extracts with consistent schemas feeding my lacrosse and NFL analyses. Easy to swap targets by changing selectors + schema config.</p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">© 2024 Ella L'Esperance. All rights reserved.</p>
+  </footer>
+
+  <script src="/assets/js/modal.js" defer></script>
+</body>
+</html>

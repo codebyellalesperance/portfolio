@@ -7,19 +7,25 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://codebyellalesperance.github.io/jumboCode.html</loc>
+        <loc>https://codebyellalesperance.github.io/projects/jumboCode.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://codebyellalesperance.github.io/scraper.html</loc>
+        <loc>https://codebyellalesperance.github.io/projects/lacrosse-analytics.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://codebyellalesperance.github.io/decomp.html</loc>
+        <loc>https://codebyellalesperance.github.io/projects/web-scraper.html</loc>
+        <lastmod>2024-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://codebyellalesperance.github.io/projects/decomp.html</loc>
         <lastmod>2024-01-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
