@@ -1,4 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <rect width="32" height="32" fill="#0b2740" rx="4"/>
-  <text x="16" y="22" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#b22222" text-anchor="middle">E</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      /* No @import here — the page must load Caveat */
+      .el { font-family: 'Caveat', cursive; font-weight: 400; font-size: 28px; fill: #b22222; }
+      .heart { fill: #b22222; }
+    </style>
+  </defs>
+
+  <!-- "EL" centered-left so the heart sits nicely to the right -->
+  <text class="el" x="30" y="38" text-anchor="end" dominant-baseline="middle">EL</text>
+
+  <!-- Heart aligned to cap height; same color as letters -->
+  <path class="heart"
+        d="M42 30c-1.4-1.9-4.2-1.9-5.6 0c-1.4 1.9-1.4 3.8 0 5.6l5.6 5.6l5.6-5.6c1.4-1.9 1.4-3.8 0-5.6c-1.4-1.9-4.2-1.9-5.6 0z"/>
 </svg>
