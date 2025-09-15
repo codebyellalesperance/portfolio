@@ -699,6 +699,20 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
+.footer-easter-egg {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0.5rem 0 0 0;
+    font-style: italic;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.footer-easter-egg:hover {
+    opacity: 1;
+    color: var(--red);
+}
+
 /* ===== BLOB ANIMATIONS ===== */
 .blob {
     position: absolute; 
@@ -951,6 +965,7 @@ textarea:focus {
     color: white;
     font-weight: 500;
     border-radius: 4px;
+    margin-bottom: 10%;
 }
 
 .secondary-email-button:hover {
