@@ -100,13 +100,19 @@
         <h2 class="section-title">Dashboards</h2>
         <p>Open the dashboards in a modal for quick preview, or full-screen in a new tab.</p>
         <button class="btn" data-modal-target="#dashModal">Preview Dashboards</button>
-        <a class="btn btn--primary" href="https://your-tableau-link" target="_blank" rel="noopener">Open Full Screen</a>
+        <a class="btn btn--primary" href="#" target="_blank" rel="noopener">Open Full Screen</a>
 
         <!-- Modal -->
         <div id="dashModal" class="modal" hidden>
           <div class="modal__panel">
             <button class="modal__close" data-modal-close>&times;</button>
-            <iframe src="https://your-embedded-dashboard" title="Lacrosse Dashboard" loading="lazy"></iframe>
+            <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--navy); font-family: var(--font-accent); font-size: 1.2rem;">
+              <div style="text-align: center;">
+                <p><strong>Dashboard Preview</strong></p>
+                <p style="margin-top: 1rem; font-size: 1rem; color: var(--text-light);">Tableau dashboard will be embedded here</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-light);">Add your Tableau public URL to display the interactive dashboard</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
