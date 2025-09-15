@@ -1,142 +1,396 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Code by Ella L'Esperance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ella L'Esperance - Software Engineer & Product Manager at Tufts University. Leading JumboCode operations, building AI applications at Nasdaq, and creating innovative tech solutions. Computer Science student with expertise in React, Python, and machine learning.">
+    <meta name="keywords" content="Ella L'Esperance, Software Engineer, Product Manager, Tufts University, Computer Science, JumboCode, Nasdaq, AI Developer, React Developer, Python Developer, Machine Learning, Full Stack Developer, Entrepreneur, Student Athlete, Web Development, Data Analytics">
+    <meta name="author" content="Ella L'Esperance">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://codebyellalesperance.github.io/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codebyellalesperance.github.io/">
+    <meta property="og:title" content="Ella L'Esperance - Software Engineer & Builder">
+    <meta property="og:description" content="Software engineer, builder, and athlete. I turn ideas into products. View my portfolio of innovative projects and technical expertise.">
+    <meta property="og:image" content="images/roster.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://codebyellalesperance.github.io/">
+    <meta property="twitter:title" content="Ella L'Esperance - Software Engineer & Builder">
+    <meta property="twitter:description" content="Software engineer, builder, and athlete. I turn ideas into products. View my portfolio of innovative projects and technical expertise.">
+    <meta property="twitter:image" content="images/roster.jpg">
+    
+    <title>Ella L'Esperance - Software Engineer & Builder</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200;6..72,300;6..72,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="images/Untitled.jpeg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ella L'Esperance",
+        "jobTitle": "Software Engineer & Product Manager",
+        "description": "Software engineer, builder, and athlete. I turn ideas into products.",
+        "url": "https://codebyellalesperance.github.io/",
+        "image": "https://codebyellalesperance.github.io/images/roster.jpg",
+        "sameAs": [
+            "https://www.linkedin.com/in/ella-lesperance",
+            "https://github.com/codebyellalesperance",
+            "https://substack.com/@ellalesperance"
+        ],
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Tufts University"
+        },
+        "knowsAbout": [
+            "Software Engineering",
+            "Product Management",
+            "Machine Learning",
+            "React Development",
+            "Python Programming",
+            "Data Analytics",
+            "AI Development",
+            "Web Development"
+        ],
+        "worksFor": [
+            {
+                "@type": "Organization",
+                "name": "JumboCode",
+                "role": "Head of Operations & Product Manager"
+            },
+            {
+                "@type": "Organization", 
+                "name": "Nasdaq",
+                "role": "Developer Experience Team"
+            }
+        ],
+        "award": "Student Athlete at Tufts University"
+    }
+    </script>
 </head>
 <body>
-
-<div class="header">
-    <img src="Untitled.jpeg" alt="Logo" width="200" height="70">
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#services">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-content">
+            <div class="logo">Ella L'Esperance</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
+        </div>
     </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home" aria-label="Hero section">
+            <div class="kicker">Howdy</div>
+            <h1>Hi, I'm Ella — software engineer, builder, and athlete.</h1>
+            <div class="sub">I turn ideas into products.</div>
+            
+            <p class="hero-description">
+                I'm passionate about building technology that makes a real difference. Whether I'm leading 
+                product development at JumboCode, prototyping AI tools at Nasdaq, or building side projects 
+                that solve real problems, I believe in the power of great code and great teams.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#about" class="btn btn--primary">About Me</a>
 </div>
 
-<!-- Home Section -->
-<section id="home">
-    <div class="text-image-container">
-        <div class="text-content">
-            <h1>My name is <u>Ella L’Esperance,</u><br> student-athlete and budding  <span id="typing-effect" class="typing"></span></h1>
-        </div>
-        <img src="roster.jpg" alt="ME!!!" class="right-image">
-    </div>
+            <img src="images/roster.jpg" alt="Ella L'Esperance - Software Engineer and Student Athlete at Tufts University" class="portrait">
 </section>
 
 <!-- About Section -->
-<section id="about">
-    <hr>
-    <h2>About Me
-        <img src="lemon.png" alt="Lemon" width="50" height="50" style="vertical-align: middle;">
-    </h2>
-    <p>
-        Hi! I'm a dedicated Computer Science major at Tufts University, 
-        graduating in 2025. My academic journey is distinguished by a 
-        comprehensive curriculum that includes Data 
-        Structures, Cloud Computing, and Computational Theory. I am 
-        proficient in programming languages such as Java, C++/C, and Python, 
-        and well-versed in tools like Git, GitHub, and Visual Studio Code.
-        <br><br>
+        <section class="section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="rule"></div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Computer Science major at Tufts University, graduating in 2025, with a unique 
+                        combination of technical skills, leadership experience, and entrepreneurial spirit. 
+                        When I'm not coding or leading product teams, you'll find me on the lacrosse field 
+                        where I've learned the importance of teamwork, resilience, and balancing multiple priorities.
+                    </p>
+                    
+                    <p>
+                        My experience spans from leading 170+ student organizations to building AI-powered 
+                        applications, from managing enterprise software projects to prototyping cutting-edge 
+                        technology. I believe in creating technology that's not just functional, but delightful 
+                        to use and meaningful to people's lives.
+                    </p>
+                    
+                    <p>
+                        I'm always excited to take on new challenges, learn new technologies, and collaborate 
+                        with passionate people who want to build something great.
+                    </p>
+                </div>
+                
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-number">170+</div>
+                        <div class="highlight-label">Students Led</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-number">5+</div>
+                        <div class="highlight-label">Products Built</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-number">30%</div>
+                        <div class="highlight-label">Efficiency Gains</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-number">100%</div>
+                        <div class="highlight-label">Student Athlete</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        My favorite experience has been with JumboCode at Tufts University,
-        where I serve as a Project Manager. In this role, I've led the 
-        Agile-driven development for a Boston-based non-profit, Sibling
-        Connections, focusing on enhancing volunteer scheduling for events. 
-        My responsibilities include overseeing the technical timeline, 
-        assigning sprint tasks to developers, 
-        and liaising with client leadership to translate requirements into
-        actionable solutions. This experience has been vital in 
-        honing in on my project management skills and application of 
-        real-world software development.
-        <br><br>
-        
-        In my internship at Bain Capital as an IT Finance and Project 
-        Management Intern, I significantly improved the firm's computer 
-        leasing process, assisted in migrating the firm's intranet to a 
-        more efficient platform, and contributed to the deployment of a 
-        unified Single Sign-On system. These experiences have helped my 
-        understanding of operational efficiency and data-driven 
-        decision-making in a corporate setting.
-        <br><br>
-        
-        As a Varsity Lacrosse player at Tufts, I've learned the importance 
-        of resilience, teamwork, and balancing a demanding academic and 
-        athletic schedule. Mastering the art of juggling the diverse 
-        responsibilities inherent in a student athlete's life, and 
-        learning to prioritize effectively, are vital skills. These 
-        skills not only help you excel in your current role but also lay 
-        a strong foundation for success in your future endeavors post-college,
-        <br><br> <u>...a journey into the future that I am actively charting at 
-                this very moment!</u>
-    </p>
+        <!-- Skills Section -->
+        <section class="section" id="skills">
+            <h2 class="section-title">What I Do</h2>
+            <div class="rule"></div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Product & Engineering</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Product Management</span>
+                        <span class="skill-tag">Full-Stack Development</span>
+                        <span class="skill-tag">AI/ML Integration</span>
+                        <span class="skill-tag">React & Node.js</span>
+                        <span class="skill-tag">Python & Data Analysis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Leadership & Operations</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Team Leadership</span>
+                        <span class="skill-tag">Agile Development</span>
+                        <span class="skill-tag">Operations Management</span>
+                        <span class="skill-tag">Client Relations</span>
+                        <span class="skill-tag">Strategic Planning</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4>Entrepreneurship</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">Product Strategy</span>
+                        <span class="skill-tag">Market Research</span>
+                        <span class="skill-tag">User Experience</span>
+                        <span class="skill-tag">Business Development</span>
+                        <span class="skill-tag">Pitch Presentations</span>
+                    </div>
+                </div>
+            </div>
 </section>
 
-<!-- Services Section -->
-<section id="services">
-    <h2>My Projects
-        <img src="lime.png" alt="Lime" width="50" height="50" style="vertical-align: middle;">
-    </h2>
-    <div class="project-container">
-        <!-- Project 1 Link -->
-        <div class="project1">
-            <!-- <h3><a href="jumboCode.html">Sibling Connections</a></h3> -->
-            <a href="jumboCode.html" class="project-link">
-                <img src="sibcon-logo.jpeg" alt="Project 1 Image" width="200" height="200">
-            </a>
+        <!-- Projects Section -->
+        <section class="section" id="projects">
+            <h2 class="section-title">Some Samples</h2>
+            <div class="rule"></div>
+            <p class="section-subtitle lede-serif">
+                Here's a collection of projects that showcase my journey from student leader to product builder. 
+                Each one represents a problem I was passionate about solving.
+            </p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/sibcon-logo.jpeg" alt="JumboCode - Head of Operations & Product Manager" class="project-image">
+                    <div class="project-content">
+                        <h3>JumboCode — Head of Operations & Product Manager</h3>
+                        <p>
+                            Led operations for a 170+ student nonprofit dev organization while product managing 
+                            a full-stack volunteer scheduling platform. Improved registration efficiency by 30% 
+                            and client satisfaction scores.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Product Management</span>
+                            <span class="tech-tag">Operations</span>
+                            <span class="tech-tag">React & Node.js</span>
+                            <span class="tech-tag">Team Leadership</span>
+                        </div>
+                        <a href="jumboCode.html" class="project-link">View Case Study →</a>
+                    </div>
         </div>
-        <!-- Project 2 Link -->
-        <div class="project2">
-            <!-- <h3><a href="jumboCode.html">Sibling Connections</a></h3> -->
-            <a href="scraper.html" class="project-link">
-                <img src="scraper.png" alt="Project 1 Image" width="150" height="150">
-            </a>
+
+                <div class="project-card">
+                    <img src="images/scraper.png" alt="Lacrosse Analytics Dashboards" class="project-image">
+                    <div class="project-content">
+                        <h3>Lacrosse Analytics Dashboards</h3>
+                        <p>
+                            Built Python EDA + Tableau dashboards to analyze NCAA D3 lacrosse stats. Applied 
+                            KMeans clustering to identify team archetypes and created shareable dashboards 
+                            for coaches and athletes.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Tableau</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">KMeans Clustering</span>
         </div>
-        <!-- Project 3 Link -->
-        <div class="project3">
-            <!-- <h3><a href="jumboCode.html">Sibling Connections</a></h3> -->
-            <a href="decomp.html" class="project-link">
-                <img src="decomp1.webp" alt="Project 1 Image" width="160" height="160">
-            </a>
+                        <a href="scraper.html" class="project-link">View Case Study →</a>
         </div>
     </div>    
 
+                <div class="project-card">
+                    <img src="images/decomp1.webp" alt="PostPal - AI Email Assistant" class="project-image">
+                    <div class="project-content">
+                        <h3>PostPal — AI Email Assistant</h3>
+                        <p>
+                            Designed and built an AI-powered email assistant that auto-filters, tags, and drafts 
+                            replies using LLMs. Created a React demo with freemium SaaS model, validated for 
+                            professionals in tech/finance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Product Design</span>
+                            <span class="tech-tag">SaaS</span>
+                        </div>
+                        <a href="decomp.html" class="project-link">View Case Study →</a>
+                    </div>
+                </div>
 
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Me
-        <img src="fruit.png" alt="Description of the image" width="50" height="50" style="vertical-align: middle;">
-    </h2>
-    <h4><a href="mailto:ella.lesperance@outlook.com" class="email-button">Email Me!</a></h4>
+                <div class="project-card">
+                    <img src="images/sibcon-logo.jpeg" alt="Inside Scoop - Fashion Trend Forecasting" class="project-image">
+                    <div class="project-content">
+                        <h3>Inside Scoop — Fashion Trend Forecasting</h3>
+                        <p>
+                            Built an AI-powered platform where users upload outfits and get personalized trend 
+                            recommendations. Created clean UI with influencer-driven rewards system, differentiating 
+                            through trend forecasting + social shopping.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">UI/UX Design</span>
+                            <span class="tech-tag">Social Platform</span>
+                        </div>
+                        <a href="jumboCode.html" class="project-link">View Case Study →</a>
+                    </div>
+                </div>
+            </div>
 </section>
 
-<script src="script.js"></script>
-
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        <a href="mailto:ella.lesperance@outlook.com">
-            <img src="email.png" alt="Email" width="40" height="40">
-        </a>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-            <img src="linkedin.png" alt="LinkedIn" width="40" height="40">
-        </a>
-        <a href="https://github.com/codebyellalesperance" target="_blank">
-            <img src="github.png" alt="Github" width="40" height="40">
-        </a>
+        <!-- Experience Section -->
+        <section class="section" id="experience">
+            <h2 class="section-title">Experience</h2>
+            <div class="rule"></div>
+            <div class="experience-grid">
+                <div class="experience-item">
+                    <h3>Nasdaq — Developer Experience Team</h3>
+                    <div class="experience-date">Generative AI Intern → Retained as SWE • 2024</div>
+                    <ul>
+                        <li>Built CI/CD pipelines and onboarding tools for AI integration</li>
+                        <li>Prototyped Vision Pro applications for financial data visualization</li>
+                        <li>Contributed to developer tooling and automation systems</li>
+                        <li>Collaborated with cross-functional teams on AI adoption strategies</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>JumboCode — Head of Operations</h3>
+                    <div class="experience-date">May 2022 - Present</div>
+                    <ul>
+                        <li>Led operations for 170+ student nonprofit development organization</li>
+                        <li>Product managed full-stack volunteer scheduling platform (React, Node.js, MongoDB)</li>
+                        <li>Improved registration efficiency by 30% and client satisfaction scores</li>
+                        <li>Managed budgets, event operations, and project coordination</li>
+                    </ul>
     </div>
-</footer>
+                
+                <div class="experience-item">
+                    <h3>Bain Capital — IT Finance & Project Management Intern</h3>
+                    <div class="experience-date">Summer 2023</div>
+                    <ul>
+                        <li>Improved computer leasing processes for operational efficiency</li>
+                        <li>Contributed to intranet migration to modern platform</li>
+                        <li>Assisted in Single Sign-On system deployment</li>
+                        <li>Gained experience in corporate IT operations and finance</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Varsity Lacrosse — Student Athlete</h3>
+                    <div class="experience-date">Tufts University • 2021 - Present</div>
+                    <ul>
+                        <li>Balanced demanding academic and athletic schedule while maintaining excellence</li>
+                        <li>Demonstrated resilience and teamwork under pressure</li>
+                        <li>Developed strong time management and leadership skills</li>
+                        <li>Maintained high performance in both academic and athletic arenas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <h2 class="section-title">Let's Build Something Cool</h2>
+            <div class="rule"></div>
+            <div class="contact-content">
+                <p class="contact-text">
+                    I'm always excited to discuss new opportunities, collaborate on interesting projects, 
+                    or simply chat about technology and innovation. Let's connect!
+                </p>
+                
+                <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="contact-button">Send Message</button>
+                </form>
+            </div>
+        </section>
 
+        <!-- Sitemap Section - Like Tanner -->
+        <section class="sitemap">
+            <div>
+                <h3 class="small-serif">Site Map</h3>
+                <ul class="map">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="small-serif">Follow</h3>
+                <ul class="follow">
+                    <li><a href="mailto:ella.lesperance@outlook.com">Email</a></li>
+                    <li><a href="https://www.linkedin.com/in/ella-lesperance" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/codebyellalesperance" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://substack.com/@ellalesperance" target="_blank" rel="noopener noreferrer">Substack</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">© 2024 Ella L'Esperance. All rights reserved.</p>
+    </footer>
 
-
-
+    <script src="script.js"></script>
 </body>
 </html>

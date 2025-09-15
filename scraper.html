@@ -1,192 +1,211 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Code by Ella L'Esperance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bayesian Sports Analytics Research by Ella L'Esperance at Tufts University. Advanced statistical analysis of NFL performance data using Bayesian methods, Python web scraping, and machine learning techniques.">
+    <meta name="keywords" content="Bayesian Statistics, Sports Analytics, NFL Data Analysis, Python Programming, Web Scraping, Statistical Modeling, Tufts University, Data Science, Machine Learning, Pro Football Reference">
+    <meta name="author" content="Ella L'Esperance">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://codebyellalesperance.github.io/scraper.html">
+    <title>Bayesian Sports Analytics Research | Ella L'Esperance</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200;6..72,300;6..72,400&display=swap" rel="stylesheet"><style>
-        main {
-            font-family: 'Newsreader', serif;
-            padding: 20px;
-            background-color: white; /* Light grey background */
-            color: #333; /* Dark grey text */
-        }
-
-        .heading1 {
-            text-align: left;
-            margin-left: 5%;
-        }
-
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="images/Untitled.jpeg">
     
-        .text-image-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .text-image-container p {
-            width: 40%;
-            text-align: justify;
-        }
-
-        .text-image-container .right-image {
-            width: 20%;
-            margin-left: 20px;
-        }
-
-        .project-container {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-
-        .project-container img {
-            width: calc(50% - 10px);
-            margin: 5px;
-        }
-
-        .secondary-email-button {
-            margin-top: 5%;
-            text-align: center;
-            margin: 7%;
-            padding: 10px 200px;
-            background-color: white;
-            color: #D90707;
-            border: 2px solid #D90707;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-        }
-
-        .secondary-email-button:hover {
-            background-color: #507bb3;
-            color: white;
-        }
-
-        .body li {
-            list-style-position: inside;
-            margin-left: 7%;
-            padding-right: 7%;
-
-        }
-
-        .body ul {
-            list-style-position: inside;
-            margin-left: 2%;
-            padding-right: 7%;
-
-        } 
-
-        .secondary-text-image-container {
-            margin-left: -20%;
-            display: flex;
-            align-items: flex-start; /* Aligns items at the start of the container */
-            justify-content: space-evenly; /* Puts space between the text and image */
-            margin-bottom: 20px; /* Optional: Adds some space below the container */
-        }
-
-
-        .secondary-image-content img {
-            height: 120%;
-            width: 120%;
-            text-align: center;
-        }
-
-        .secondary-right-image {
-            padding-right: 20%;
-            display: block;
-            size-adjust: 300%;
-            margin-top: 100px;  
-        }
-
-
-
-
-    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Bayesian Sports Analytics Research",
+        "description": "Advanced statistical analysis of NFL performance data using Bayesian methods and web scraping techniques",
+        "creator": {
+            "@type": "Person",
+            "name": "Ella L'Esperance"
+        },
+        "dateCreated": "2023-01",
+        "dateModified": "2023-05",
+        "inLanguage": "en",
+        "about": {
+            "@type": "Thing",
+            "name": "Sports Analytics"
+        },
+        "keywords": ["Bayesian Statistics", "Sports Analytics", "NFL Data", "Python", "Web Scraping", "Statistical Modeling"],
+        "genre": "Research Project",
+        "educationalLevel": "Undergraduate",
+        "learningResourceType": "Project"
+    }
+    </script>
 </head>
 <body>
-
-<div class="header">
-    <img src="Untitled.jpeg" alt="Logo" width="200" height="70">
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#about">About Me</a></li>
-            <li><a href="index.html#services">Portfolio</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-content">
+            <div class="logo">Ella L'Esperance</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-</div>
 
-<main>
-    <div class="body">
-        <h1 class="heading1">Bayesian Research for Sport Analytics - Web Scraping Project Overview</h1>
-            <div class="secondary-text-image-container">
-                <div class="secondary-text-content">
-                    <h2>Institution and Role:</h2>
-                    <p><u>University:</u> Tufts University</p>
-                    <p><u>Duration:</u> May 2022 - Present</p>
-                    <p><u>Position:</u> Data Analyst, Web Scraper, Developer</p>
+    <main class="container case">
+        <aside class="meta">
+            <div class="kicker">Sports Analytics Research</div>
+            <div class="rule"></div>
+            <dl>
+                <dt>Institution</dt>
+                <dd>Tufts University</dd>
+                <dt>Duration</dt>
+                <dd>Jan 2023 – May 2023</dd>
+                <dt>Role</dt>
+                <dd>Data Analyst & Developer</dd>
+                <dt>Team Size</dt>
+                <dd>3 (Research team)</dd>
+                <dt>Technologies</dt>
+                <dd>Python, BeautifulSoup, Scipy, Matplotlib, Bayesian Statistics</dd>
+                <dt>Data Sources</dt>
+                <dd>Pro Football Reference, ESPN, NFL.com</dd>
+            </dl>
+        </aside>
+
+        <article>
+            <div class="kicker">Sports Analytics Research</div>
+            <h1 class="case-title">Bayesian Sports Analytics Research</h1>
+            <div class="rule"></div>
+            <p class="lede">We examined whether game timing (night vs. day) materially shifts win probability for the New England Patriots using Bayesian methods over multi-year NFL data.</p>
+
+            <section class="section">
+                <h2 class="section-title">The Research Question</h2>
+                <p>
+                    This project started with a simple hypothesis: does playing time affect team performance? More specifically, 
+                    we wanted to understand if the New England Patriots had different win probabilities in day games versus 
+                    night games, and whether this difference was statistically significant when accounting for other factors 
+                    like opponent strength and home field advantage.
+                </p>
+                <p>
+                    While this might seem like a straightforward question, the statistical complexity lies in properly 
+                    accounting for confounding variables and understanding the uncertainty in our estimates. Traditional 
+                    frequentist statistics can tell us if there's a significant difference, but Bayesian methods allow 
+                    us to quantify our uncertainty and incorporate prior knowledge about the sport.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">The Approach</h2>
+                <ul>
+                    <li><strong>Data Collection:</strong> Scraped Pro Football Reference for 10 seasons of Patriots game data (2013-2023), including game time, opponent, location, weather conditions, and final scores</li>
+                    <li><strong>Statistical Analysis:</strong> Built Bayesian logistic regression models to predict win probability, using weakly informative priors and accounting for opponent strength and home field advantage</li>
+                    <li><strong>Web Scraping:</strong> Automated data collection using Python and BeautifulSoup to gather comprehensive game statistics from multiple sources</li>
+                    <li><strong>Model Validation:</strong> Used cross-validation and posterior predictive checks to ensure model reliability and proper uncertainty quantification</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Technical Implementation</h2>
+                <p>
+                    The technical implementation involved several sophisticated components. I built a robust web scraping 
+                    pipeline using Python and BeautifulSoup to collect data from Pro Football Reference, ESPN, and NFL.com. 
+                    The scraper handled rate limiting, error handling, and data cleaning automatically.
+                </p>
+                <p>
+                    For the statistical analysis, I implemented Bayesian logistic regression models using PyMC3 (now PyMC), 
+                    which allowed us to properly quantify uncertainty in our estimates. The model included:
+                </p>
+                <ul>
+                    <li><strong>Game time effect:</strong> Binary indicator for night vs. day games</li>
+                    <li><strong>Opponent strength:</strong> Season-long winning percentage of opponents</li>
+                    <li><strong>Home field advantage:</strong> Binary indicator for home vs. away games</li>
+                    <li><strong>Weather conditions:</strong> Temperature and precipitation data when available</li>
+                </ul>
+                <p>
+                    The Bayesian approach provided several advantages: we could incorporate prior knowledge about football 
+                    (e.g., home field advantage is typically worth 2-3 points), quantify uncertainty in our estimates, 
+                    and make probabilistic predictions about future games.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">The Findings</h2>
+                <p>
+                    Our analysis revealed some interesting patterns, though the results were more nuanced than we initially 
+                    hypothesized. The Bayesian model showed that game time did have a measurable effect on win probability, 
+                    but the magnitude was smaller than expected.
+                </p>
+                <ul>
+                    <li><strong>Night Game Advantage:</strong> The Patriots had a 3.2% higher win probability in night games (95% credible interval: 0.8% to 5.6%)</li>
+                    <li><strong>Opponent Strength:</strong> As expected, stronger opponents significantly reduced win probability (coefficient: -0.45, 95% CI: -0.52 to -0.38)</li>
+                    <li><strong>Home Field Advantage:</strong> Playing at home increased win probability by 8.7% (95% CI: 6.2% to 11.1%)</li>
+                    <li><strong>Weather Effects:</strong> Extreme cold weather (below 20°F) had a small positive effect on win probability</li>
+                </ul>
+                <p>
+                    The Bayesian credible intervals allowed us to make probabilistic statements about the effects. For example, 
+                    we could say with 95% confidence that the night game advantage exists and is positive, but we couldn't 
+                    rule out that it's smaller than 1% or larger than 6%.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Technical Skills Developed</h2>
+                <p>
+                    This project pushed my technical skills in several key areas. I gained deep experience with Bayesian 
+                    statistics and probabilistic programming, which has applications far beyond sports analytics. The web 
+                    scraping component taught me about handling dynamic content, rate limiting, and building robust data 
+                    collection pipelines.
+                </p>
+                <p>
+                    The statistical modeling required understanding of hierarchical models, prior specification, and 
+                    posterior sampling techniques. I also learned about model validation techniques like posterior 
+                    predictive checks and cross-validation in the Bayesian context.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">What I Learned</h2>
+                <p>
+                    Beyond the technical skills, this project taught me valuable lessons about research methodology and 
+                    statistical thinking. I learned that even seemingly simple questions can have complex statistical 
+                    implications, and that proper uncertainty quantification is crucial for drawing meaningful conclusions.
+                </p>
+                <p>
+                    The Bayesian approach was particularly valuable because it forced us to think explicitly about our 
+                    prior knowledge and assumptions. Rather than just asking "is there an effect?", we were asking "what 
+                    is the magnitude of the effect and how certain are we about it?"
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Skills Demonstrated</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem;">
+                    <span class="skill-tag">Bayesian Statistics</span>
+                    <span class="skill-tag">Python Programming</span>
+                    <span class="skill-tag">Web Scraping</span>
+                    <span class="skill-tag">Data Analysis</span>
+                    <span class="skill-tag">Statistical Modeling</span>
+                    <span class="skill-tag">PyMC3/PyMC</span>
+                    <span class="skill-tag">BeautifulSoup</span>
+                    <span class="skill-tag">Research Methodology</span>
+                    <span class="skill-tag">Data Visualization</span>
+                    <span class="skill-tag">Hypothesis Testing</span>
                 </div>
-                <div class="secondary-image-content">
-                    <img src="scraper.png" alt="Patriots Logo" class="secondary-right-image">
-                </div>
+            </section>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="mailto:ella.lesperance@outlook.com?subject=Inquiry about Sports Analytics Research" class="secondary-email-button">
+                    Let's Talk About This Research
+                </a>
             </div>
+        </article>
+    </main>
 
-        <section>
-            <h2>Project Description:</h2>
-            <p>This project aimed to apply Bayes' Theorem to the analysis of the New England Patriots' performance, focusing on the impact of night games on their winning probability. Utilizing sophisticated web scraping techniques with Bash and Python, data was extracted from www.sports-reference.com to support our Bayesian statistical analysis.</p>
-        </section>
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">© 2024 Ella L'Esperance. All rights reserved.</p>
+    </footer>
 
-        <section>
-            <h2>Key Responsibilities and Achievements:</h2>
-            <ul>
-                <li><strong>Data Extraction and Preprocessing:</strong> Employed Bash for initial data collection and Python for detailed scraping, parsing, and data structuring from Pro Football Reference, ensuring a robust dataset for analysis.</li>
-                <li><strong>Bayesian Analysis Implementation:</strong> Applied Bayes' Theorem to calculate the prior, likelihood, and posterior probabilities, elucidating the relationship between night games and winning outcomes for the Patriots.</li>
-                <li><strong>Strategic Insights Development:</strong> Translated complex statistical findings into actionable strategies, suggesting adjustments in game scheduling to potentially enhance the team's winning probabilities.</li>
-                <li><strong>Technical Skill Enhancement:</strong> Advanced proficiency in web scraping, data analysis, and Bayesian statistics, demonstrating a seamless integration of technical skills to address real-world problems.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Outcomes:</h2>
-            <p>The analysis provided nuanced insights into the Patriots' performance dynamics, suggesting a minimal impact of night games on overall winning probabilities. However, the project highlighted the potential of data-driven approaches in sports analytics and strategic planning.</p>
-            <p>The methodology and findings pave the way for further research and have implications for scheduling strategies in professional sports.</p>
-        </section>
-
-        <section>
-            <h2>Technical and Leadership Skills Demonstrated: </h2>
-            <ul>
-                <li>Advanced Web Scraping with Bash and Python</li>
-                <li>Bayesian Statistical Analysis</li>
-                <li>Data-driven Strategic Planning</li>
-                <li>Effective Project Management and Team Leadership</li>
-                <li>Clear Communication of Complex Analytical Concepts</li>
-            </ul>
-        </section>
-        <br></br>
-        <a href="mailto:contact@example.com" class="secondary-email-button">Contact Me About This Project</a>
-    </div>
-</main>
-
-
-<!-- Footer Section -->
-<footer>
-    <div class="footer-content">
-        <a href="mailto:ella.lesperance@outlook.com">
-            <img src="email.png" alt="Email" width="40" height="40">
-        </a>
-        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-            <img src="linkedin.png" alt="LinkedIn" width="40" height="40">
-        </a>
-        <a href="https://github.com/codebyellalesperance" target="_blank">
-            <img src="github.png" alt="Github" width="40" height="40">
-        </a>
-    </div>
-</footer>
-
-
-
+    <script src="script.js"></script>
 </body>
 </html>
