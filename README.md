@@ -150,7 +150,7 @@ portfolio-1/
 3. **Navigate** through the different sections and project case studies
 
 ### **Live Site**
-🌐 **Live Portfolio**: [https://codebyellalesperance.github.io/](https://codebyellalesperance.github.io/)
+🌐 **Live Portfolio**: [https://codebyel.com/](https://codebyel.com/)
 
 ## 📱 Responsive Breakpoints
 
