@@ -1,50 +1,59 @@
 # 🚀 Ella L'Esperance - Professional Portfolio
 
-A stunning, modern portfolio website showcasing Ella L'Esperance's expertise as a Computer Science student, Project Manager, and Software Engineer at Tufts University.
+A stunning, modern portfolio website showcasing Ella L'Esperance's expertise as a Computer Science student, Product Manager, and Software Engineer at Tufts University.
 
 ## ✨ Features
 
 ### 🎨 **Modern Design**
-- **Gradient Backgrounds**: Beautiful color gradients and visual effects
-- **Card-Based Layout**: Clean, organized content presentation
+- **Tanner Waite Inspired**: Clean, minimalist design with professional typography
+- **Bold Hero Section**: Eye-catching introduction with clear value proposition
+- **Case Study Layout**: Professional project showcase with detailed breakdowns
 - **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
 - **Smooth Animations**: Scroll-triggered animations and micro-interactions
-- **Professional Typography**: Google Fonts integration with Newsreader font family
+- **Professional Typography**: Anton, Inter, and Crimson Text font families
 
 ### 🔧 **Interactive Elements**
-- **Typing Animation**: Dynamic text effect in hero section
 - **Smooth Scrolling**: Seamless navigation between sections
+- **Active Navigation**: Dynamic navigation highlighting with underlines
 - **Hover Effects**: Engaging card animations and button interactions
 - **Scroll Animations**: Elements fade in as you scroll
-- **Active Navigation**: Dynamic navigation highlighting
+- **Project Modals**: Interactive project previews (where applicable)
 
 ### ♿ **Accessibility & Performance**
 - **WCAG Compliant**: Full accessibility support with ARIA labels
-- **SEO Optimized**: Meta tags, Open Graph, and Twitter Card support
+- **SEO Optimized**: Comprehensive meta tags, Open Graph, and Twitter Card support
 - **Performance Monitoring**: Built-in performance tracking
 - **Error Handling**: Comprehensive error management
 - **Keyboard Navigation**: Full keyboard accessibility support
+- **Structured Data**: JSON-LD schema markup for search engines
 
 ## 📁 Project Structure
 
 ```
 portfolio-1/
-├── index.html              # Main portfolio page with enhanced hero section
-├── jumboCode.html          # Detailed Sibling Connections project showcase
-├── scraper.html            # Sports Analytics research project details
-├── decomp.html             # Machine Learning & Computing projects portfolio
-├── styles.css              # Modern CSS with gradients, animations, and responsive design
-├── script.js               # Enhanced JavaScript with scroll effects and interactions
-├── images/                 # Optimized image assets
-│   ├── Untitled.jpeg       # Professional logo
-│   ├── roster.jpg          # High-quality profile photo
-│   ├── sibcon-logo.jpeg    # Project logo
-│   ├── scraper.png         # Analytics project visual
-│   ├── decomp1.webp        # ML projects image
-│   ├── email.png           # Social media icons
+├── index.html                    # Main portfolio page with enhanced hero section
+├── projects/                     # Project case studies directory
+│   ├── lacrosse-analytics.html   # NCAA D3 Women's Lacrosse analytics case study
+│   ├── web-scraper.html         # Data engineering pipeline case study
+│   ├── jumboCode.html           # Sibling Connections platform case study
+│   └── decomp.html              # Machine Learning & Computing projects case study
+├── assets/                      # Organized asset directory
+│   ├── css/
+│   │   └── site.css            # Main stylesheet with case study layouts
+│   └── js/
+│       └── modal.js            # Shared modal functionality
+├── images/                      # Optimized image assets
+│   ├── Untitled.jpeg           # Professional logo
+│   ├── roster.jpg              # High-quality profile photo
+│   ├── sibcon-logo.jpeg        # Project logo
+│   ├── scraper.png             # Analytics project visual
+│   ├── decomp1.webp            # ML projects image
+│   ├── email.png               # Social media icons
 │   ├── linkedin.png
 │   └── github.png
-└── README.md               # Comprehensive documentation
+├── sitemap.xml                  # SEO sitemap
+├── robots.txt                   # Search engine directives
+└── README.md                    # Comprehensive documentation
 ```
 
 ## 🛠️ Technologies Used
@@ -53,32 +62,42 @@ portfolio-1/
 - **HTML5**: Semantic markup with accessibility features
 - **CSS3**: Modern styling with CSS Grid, Flexbox, and custom properties
 - **JavaScript (ES6+)**: Interactive features and performance monitoring
-- **Google Fonts**: Professional typography with Newsreader font family
+- **Google Fonts**: Professional typography with Anton, Inter, and Crimson Text
 
 ### **Design System**
 - **CSS Variables**: Consistent color palette and spacing
-- **Gradient Backgrounds**: Modern visual effects
-- **Box Shadows**: Depth and dimension
-- **Border Radius**: Consistent rounded corners
-- **Transitions**: Smooth animations and hover effects
+- **Case Study Layout**: Professional two-column grid with sticky sidebar
+- **Typography Hierarchy**: Clear visual hierarchy with proper font sizing
+- **Responsive Breakpoints**: Mobile-first design with 880px breakpoint
+- **Smooth Transitions**: Professional animations and hover effects
 
 ## 🎯 Projects Showcased
 
-### 1. 🏢 Sibling Connections - JumboCode Project
-- **Role**: Project and Product Manager
+### 1. 📊 Women's Lacrosse Analytics
+- **Role**: Data Analyst & Developer
+- **Duration**: 2024–2025 Season
+- **Impact**: Uncovered key performance indicators and team archetypes
+- **Skills**: Python, Tableau, Selenium, KMeans Clustering, Statistical Analysis
+- **Technologies**: pandas, scikit-learn, data visualization
+- **Key Finding**: Goals per game had strongest correlation with win percentage
+
+### 2. 🔧 Web Scraper Pipeline
+- **Role**: Data Engineer
+- **Goal**: Reliable data extraction for sports analytics
+- **Impact**: Resilient scraping with schema validation and deduplication
+- **Skills**: Python, Selenium, Data Engineering, Automation
+- **Technologies**: GitHub Actions, SQLite, CSV normalization
+- **Features**: Anti-fragility, user-agent rotation, polite delays
+
+### 3. 🏢 Sibling Connections Platform - JumboCode
+- **Role**: Head of Operations & Product Manager
 - **Duration**: May 2022 - Present
-- **Impact**: 75% reduction in scheduling time, 90% volunteer satisfaction
+- **Impact**: 30% improvement in registration efficiency
 - **Skills**: Agile Project Management, Team Leadership, Client Relations
 - **Technologies**: React.js, Node.js, MongoDB, Agile/Scrum
+- **Team**: Led 170+ student organization, managed 8 developers
 
-### 2. 📊 Sports Analytics - Bayesian Research
-- **Role**: Data Analyst, Web Scraper, Developer
-- **Duration**: January 2023 - May 2023
-- **Impact**: Advanced statistical analysis of NFL performance data
-- **Skills**: Web Scraping, Bayesian Statistics, Data Analysis
-- **Technologies**: Python, Bash, BeautifulSoup, NumPy, SciPy
-
-### 3. 🤖 Machine Learning & Computing Projects
+### 4. 🤖 Machine Learning & Computing Projects
 - **Role**: Software Developer, Pair Programmer
 - **Duration**: 2022 - 2024
 - **Impact**: Performance benchmarks and innovative algorithms
@@ -89,47 +108,54 @@ portfolio-1/
 
 ### **Color Palette**
 ```css
---primary-color: #667eea    /* Professional Blue */
---secondary-color: #764ba2  /* Deep Purple */
---accent-color: #f093fb     /* Bright Pink */
---text-dark: #2d3748        /* Dark Gray */
---background-light: #f7fafc /* Light Gray */
+--navy: #0b2740        /* Deep Navy */
+--red: #b22222         /* Coastal Red */
+--ink: #0a0a0a         /* Ink Black */
+--paper: #f7f7f6       /* Off-white */
 ```
 
 ### **Typography**
-- **Primary Font**: Newsreader (Google Fonts)
+- **Headings**: Anton (Bold, Uppercase, Impact-style)
+- **Body Text**: Inter (Clean, readable, system font)
+- **Accents**: Crimson Text (Italic, serif for quotes and emphasis)
 - **Responsive Sizing**: Fluid typography with clamp() functions
-- **Font Weights**: 200-600 range for visual hierarchy
 
 ### **Layout System**
-- **CSS Grid**: Modern layout system for complex arrangements
+- **CSS Grid**: Modern layout system for case studies
 - **Flexbox**: Flexible component layouts
-- **Responsive Breakpoints**: Mobile-first design approach
+- **Sticky Sidebar**: Meta information stays visible while scrolling
+- **Mobile-First**: Responsive design starting from 880px breakpoint
 
 ## 🚀 Getting Started
 
 ### **Local Development**
-1. **Clone or Download** the repository
-2. **Open** `index.html` in a web browser
-3. **Navigate** through the different sections using the enhanced navigation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/codebyellalesperance/portfolio.git
+   cd portfolio
+   ```
 
-### **Live Server** (Recommended)
-```bash
-# Using Python
-python3 -m http.server 8000
+2. **Open in browser**
+   ```bash
+   # Using Python
+   python3 -m http.server 8000
+   
+   # Using Node.js
+   npx live-server
+   
+   # Using VS Code Live Server extension
+   # Right-click index.html → "Open with Live Server"
+   ```
 
-# Using Node.js
-npx live-server
+3. **Navigate** through the different sections and project case studies
 
-# Using VS Code Live Server extension
-# Right-click index.html → "Open with Live Server"
-```
+### **Live Site**
+🌐 **Live Portfolio**: [https://codebyellalesperance.github.io/](https://codebyellalesperance.github.io/)
 
 ## 📱 Responsive Breakpoints
 
-- **Mobile**: < 768px - Optimized for touch interaction
-- **Tablet**: 768px - 1024px - Balanced layout
-- **Desktop**: > 1024px - Full feature experience
+- **Mobile**: < 880px - Single column layout, optimized for touch
+- **Tablet/Desktop**: ≥ 880px - Two-column case study layout with sticky sidebar
 
 ## ♿ Accessibility Features
 
@@ -140,33 +166,37 @@ npx live-server
 - **Focus Management**: Visible focus indicators
 - **Color Contrast**: High contrast ratios for readability
 
-### **Performance Optimizations**
-- **Lazy Loading**: Images load as needed
-- **Smooth Scrolling**: Hardware-accelerated animations
-- **Error Handling**: Graceful degradation
-- **Performance Monitoring**: Built-in analytics
+### **SEO Optimizations**
+- **Meta Tags**: Comprehensive descriptions and keywords
+- **Open Graph**: Social media sharing optimization
+- **Twitter Cards**: Twitter sharing enhancement
+- **Structured Data**: Schema.org JSON-LD markup
+- **Sitemap**: XML sitemap for search engines
+- **Robots.txt**: Search engine directives
 
 ## 🔧 Customization
 
 ### **Colors**
-Update CSS variables in `styles.css`:
+Update CSS variables in `assets/css/site.css`:
 ```css
 :root {
-    --primary-color: #your-color;
-    --secondary-color: #your-color;
-    --accent-color: #your-color;
+    --navy: #your-navy-color;
+    --red: #your-red-color;
+    --ink: #your-text-color;
+    --paper: #your-background-color;
 }
 ```
 
 ### **Content**
-- **Projects**: Update project details in respective HTML files
+- **Projects**: Update project details in respective HTML files in `/projects/`
 - **Skills**: Modify skills lists in the skills section
 - **Contact**: Update contact information and social links
+- **Case Studies**: Add new projects by creating HTML files in `/projects/`
 
 ### **Images**
 - **Profile Photo**: Replace `images/roster.jpg`
 - **Logo**: Update `images/Untitled.jpeg`
-- **Project Images**: Add your project screenshots
+- **Project Images**: Add your project screenshots to `/images/`
 
 ## 📊 Performance Metrics
 
@@ -181,21 +211,24 @@ Update CSS variables in `styles.css`:
 - **Meta Tags**: Comprehensive meta descriptions and keywords
 - **Open Graph**: Social media sharing optimization
 - **Twitter Cards**: Twitter sharing enhancement
-- **Structured Data**: Schema.org markup
-- **Sitemap Ready**: SEO-friendly URL structure
+- **Structured Data**: Schema.org markup for rich snippets
+- **Sitemap**: XML sitemap for search engine indexing
+- **Robots.txt**: Search engine crawling directives
+- **Canonical URLs**: Proper URL canonicalization
 
 ## 📞 Contact Information
 
 - **Email**: [ella.lesperance@outlook.com](mailto:ella.lesperance@outlook.com)
 - **LinkedIn**: [Ella L'Esperance](https://www.linkedin.com/in/ella-lesperance)
 - **GitHub**: [codebyellalesperance](https://github.com/codebyellalesperance)
+- **Substack**: [@ellalesperance](https://substack.com/@ellalesperance)
 
 ## 🎓 Education & Experience
 
 - **Institution**: Tufts University
 - **Degree**: Computer Science (Expected 2025)
-- **Activities**: Varsity Lacrosse, JumboCode Project Manager
-- **Internship**: Bain Capital - IT Finance and Project Management
+- **Activities**: Varsity Lacrosse, JumboCode Head of Operations
+- **Experience**: Nasdaq Developer Experience Team, Bain Capital Internship
 
 ## 📄 License
 
@@ -203,14 +236,25 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🌟 Key Highlights
 
-- ✅ **Modern, Professional Design**
-- ✅ **Fully Responsive Layout**
+- ✅ **Professional Case Study Layout**
+- ✅ **Fully Responsive Design**
 - ✅ **Accessibility Compliant**
 - ✅ **Performance Optimized**
-- ✅ **SEO Friendly**
-- ✅ **Interactive Elements**
+- ✅ **SEO Friendly with Structured Data**
+- ✅ **Interactive Navigation**
 - ✅ **Comprehensive Project Details**
 - ✅ **Professional Contact Integration**
+- ✅ **Modern Typography System**
+- ✅ **Clean, Minimalist Design**
+
+## 🔄 Recent Updates
+
+- **December 2024**: Complete redesign with Tanner Waite inspired layout
+- **Case Studies**: Professional project showcase with detailed breakdowns
+- **SEO Enhancement**: Added structured data, sitemap, and robots.txt
+- **Responsive Design**: Mobile-first approach with proper breakpoints
+- **Typography**: Implemented professional font stack (Anton, Inter, Crimson Text)
+- **Project Structure**: Organized assets and created dedicated projects directory
 
 ---
 
