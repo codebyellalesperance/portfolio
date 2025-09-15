@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Axess Tennis — Ella L'Esperance</title>
+  <meta name="description" content="Axess Tennis: a budget-based fantasy tennis platform with ATP/WTA scoring, weekly lineups, and live stats."/>
+  <meta name="keywords" content="Axess Tennis, Fantasy Sports, Tennis, Web App, Next.js, TypeScript, Supabase, Sports Tech">
+  <meta name="author" content="Ella L'Esperance">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://codebyel.com/projects/axess-tennis.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="../images/Untitled.jpeg">
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-content">
+        <div class="logo">Ella L'Esperance</div>
+        <ul class="nav-links">
+            <li><a href="/index.html#home" class="nav-link">Home</a></li>
+            <li><a href="/index.html#about" class="nav-link">About</a></li>
+            <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+            <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <main class="case container">
+    <!-- META RAIL -->
+    <aside class="meta">
+      <div class="kicker">Sports Tech / Web App</div>
+      <div class="rule"></div>
+      <dl>
+        <dt>Role</dt><dd>Founder &amp; Engineer</dd>
+        <dt>Scope</dt><dd>Fantasy sports platform (web-first)</dd>
+        <dt>Season</dt><dd>Ongoing</dd>
+        <dt>Stack</dt><dd>Next.js, TypeScript, Tailwind, Supabase, Recharts</dd>
+        <dt>Scoring</dt><dd>ATP/WTA points, weekly lineup caps</dd>
+      </dl>
+    </aside>
+
+    <!-- CONTENT -->
+    <article class="content">
+      <h1 class="case-title">Axess&nbsp;Tennis</h1>
+      <p class="kicker">Product Overview</p>
+      <div class="rule"></div>
+      <p class="lede">
+        A fantasy tennis platform built for the way fans actually follow the tour:
+        budget-based drafting, ATP/WTA points as scoring, and weekly "set your lineup" windows
+        before each tournament.
+      </p>
+
+      <section class="section">
+        <h2 class="section-title">The Problem</h2>
+        <p>
+          Fantasy football is everywhere, but tennis fans have no mainstream fantasy experience with
+          real strategy and season-long team building. Existing apps are either pick'em one-offs or
+          opaque scoring systems that don't map to tour points.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Solution</h2>
+        <ul>
+          <li><strong>Budget Drafting:</strong> Users assemble a 12–15 player roster under a fixed season budget.</li>
+          <li><strong>Weekly Lineups:</strong> Before each tournament, pick a subset of eligible players to "play."</li>
+          <li><strong>Real Scoring:</strong> Points = official ATP/WTA points from the event.</li>
+          <li><strong>Waivers/Bidding:</strong> Free-agency bids (drop/add) lock weekly.</li>
+          <li><strong>Leagues:</strong> Public and private with season leaderboards and rewards.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Design & UX</h2>
+        <ul>
+          <li>Stat-forward UI inspired by PGA Tour aesthetics; clear, dense tables for live scoring.</li>
+          <li>Roster panel + tournament eligibility badges; lineup countdown banner.</li>
+          <li>Mobile-first flows for bid submission and lineup confirmation.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Architecture</h2>
+        <ul>
+          <li><strong>Next.js (App Router) + Tailwind:</strong> Fast, SEO-friendly pages and dynamic routes.</li>
+          <li><strong>Supabase:</strong> Auth, Postgres, RLS policies for league isolation.</li>
+          <li><strong>Data Ingestion:</strong> Server cron to pull tournament entries / live scores (provider-agnostic).</li>
+          <li><strong>Realtime:</strong> Supabase channels for match updates (future).</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Outcome & Next</h2>
+        <ul>
+          <li>Clickable Figma prototype and working frontend with mock data.</li>
+          <li>Next: production scoring feed, anti-abuse on bidding, season admin tools, and prize logic.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">© 2024 Ella L'Esperance. All rights reserved.</p>
+    <p class="footer-easter-egg">made by ella lesperance with &lt;3</p>
+  </footer>
+</body>
+</html>

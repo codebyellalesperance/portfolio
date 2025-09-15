@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>NFL Timing Study (Patriots) — Ella L'Esperance</title>
+  <meta name="description" content="Bayesian analysis of whether night vs. day game timing impacts the New England Patriots' win probability. Includes scraping pipeline, model design, and results."/>
+  <meta name="keywords" content="NFL Analysis, Bayesian Statistics, Patriots, Sports Analytics, Python, PyMC, Data Science, Football Analytics">
+  <meta name="author" content="Ella L'Esperance">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://codebyel.com/projects/bayesian-patriots.html">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Inter:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="../images/Untitled.jpeg">
+  <!-- Optional OG -->
+  <meta property="og:title" content="NFL Timing Study (Patriots) — Bayesian Analysis">
+  <meta property="og:description" content="Does game timing (night vs. day) move win probability? Bayesian model + scraping pipeline.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://codebyel.com/projects/bayesian-patriots.html">
+  <meta property="og:image" content="https://codebyel.com/assets/og/bayesian-patriots.png">
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-content">
+        <div class="logo">Ella L'Esperance</div>
+        <ul class="nav-links">
+            <li><a href="/index.html#home" class="nav-link">Home</a></li>
+            <li><a href="/index.html#about" class="nav-link">About</a></li>
+            <li><a href="/index.html#projects" class="nav-link">Projects</a></li>
+            <li><a href="/index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <main class="case container">
+    <!-- META RAIL -->
+    <aside class="meta">
+      <div class="kicker">Sports Analytics</div>
+      <div class="rule"></div>
+      <dl>
+        <dt>Team</dt><dd>New England Patriots (NFL)</dd>
+        <dt>Question</dt><dd>Does night vs. day kickoff affect win probability?</dd>
+        <dt>Role</dt><dd>Data Analyst &amp; Developer</dd>
+        <dt>Duration</dt><dd>Jan 2023 – May 2023</dd>
+        <dt>Stack</dt><dd>Python, pandas, PyMC, ArviZ, BeautifulSoup/Selenium</dd>
+        <dt>Outputs</dt><dd>Posterior summaries, PPCs, reproducible notebook</dd>
+      </dl>
+    </aside>
+
+    <!-- CONTENT -->
+    <article class="content">
+      <h1 class="case-title">NFL Timing Study:<br/>Bayesian Analysis (Patriots)</h1>
+      <p class="kicker">Research Overview</p>
+      <div class="rule"></div>
+      <p class="lede">
+        Built a scraping pipeline and Bayesian model to test whether game timing (night vs. day) 
+        measurably shifts the Patriots' win probability after controlling for home field and opponent strength.
+      </p>
+
+      <section class="section">
+        <h2 class="section-title">The Question</h2>
+        <p>
+          Popular belief: the Pats are "better at night." Reality check: is the timing effect statistically credible
+          once we account for confounders?
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Data Pipeline</h2>
+        <ul>
+          <li><strong>Sources:</strong> Multi-year game logs (opponent, location, score), kickoff time, rest days.</li>
+          <li><strong>Scraping:</strong> Requests/BeautifulSoup for static pages; Selenium fallback for JS-rendered pages.</li>
+          <li><strong>Cleaning:</strong> Standardized team names, parsed kickoff as night/day, created features:
+              <code>home</code>, <code>night_game</code>, <code>rest_days</code>, optional <code>elo_diff</code>.</li>
+          <li><strong>Storage:</strong> CSV + SQLite snapshot per run with idempotent writes and de-duplication.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Model</h2>
+        <ul>
+          <li><strong>Outcome:</strong> binary win (1/0).</li>
+          <li><strong>Link:</strong> logistic regression in a Bayesian framework.</li>
+          <li><strong>Predictors:</strong> <code>night_game</code>, <code>home</code>, <code>elo_diff</code> (or opponent strength proxy), <code>rest_days</code>.</li>
+          <li><strong>Priors:</strong> Normal(0, 1) on coefficients; weakly informative intercept.</li>
+          <li><strong>Inference:</strong> PyMC NUTS; 4 chains, 2k draws; checked <code>r_hat</code>, ESS, and energy diagnostics.</li>
+          <li><strong>PPC:</strong> Posterior predictive checks to validate calibration.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Results</h2>
+        <ul>
+          <li><strong>Night Game Coefficient:</strong> median near zero with wide credible interval overlapping 0
+              (i.e., no strong evidence of a timing effect once controls are included).</li>
+          <li><strong>Home Field:</strong> positive and credible, as expected.</li>
+          <li><strong>Opponent Strength:</strong> meaningful driver of outcome; rest days small/modest effect.</li>
+        </ul>
+        <p class="note">Interpretation: any "prime-time magic" is likely narrative, not signal—at least for the studied seasons.</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Takeaways</h2>
+        <ul>
+          <li>Bayesian framing makes the uncertainty explicit; we report credible intervals, not just p-values.</li>
+          <li>Scraper + schema-first exports make reruns robust to site changes.</li>
+          <li>Template generalizes to other teams and hypotheses with minimal changes.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">© 2024 Ella L'Esperance. All rights reserved.</p>
+    <p class="footer-easter-egg">made by ella lesperance with &lt;3</p>
+  </footer>
+</body>
+</html>
