@@ -811,72 +811,93 @@ textarea:focus {
 }
 
 /* ===== CASE STUDY LAYOUT ===== */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 24px; 
 }
 
 .case {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;  /* mobile first */
     gap: 2.5rem;
+    align-items: start;           /* DO NOT center items */
     padding: 8rem 0 4rem;
 }
 
-@media (min-width: 980px) {
+/* two-column at tablet/desktop */
+@media (min-width: 880px) {
     .case {
-        grid-template-columns: 280px minmax(0, 1fr); /* meta rail + content */
+        grid-template-columns: 280px minmax(0, 1fr);
         gap: 3rem;
     }
 }
 
-h1.case-title {
+.case-title {
     font-family: "Anton", Impact, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: -0.01em;
-    line-height: .88;
-    font-size: clamp(42px, 8.2vw, 112px);
-    max-width: 16ch;
+    letter-spacing: -.01em;
+    line-height: .9;
+    font-size: clamp(40px, 7vw, 96px); /* slightly tamer */
+    max-width: 14ch;                   /* wider than 10–12ch you likely had */
+    margin: 0 0 .5rem 0;               /* kill random top margins */
     color: var(--navy);
-    text-wrap: balance;
+    text-wrap: balance;                 /* better line breaks */
 }
 
-.kicker {
-    font: italic 400 16px/1 "Crimson Text", Georgia, serif;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--red);
-    margin-bottom: .5rem;
+.content { 
+    padding-top: .25rem;   /* any padding stops margin collapse */
 }
 
-.rule {
-    width: 72px;
-    height: 2px;
-    background: var(--red);
-    margin: 10px 0 28px;
+.section { 
+    margin: 0;             /* reset */
+    padding: 2rem 0;       /* use padding for vertical rhythm */
 }
 
-.meta {
-    position: sticky;
-    top: 84px;
-    align-self: start;
+.section + .section { 
+    padding-top: 2.75rem; 
+}
+
+.meta { 
+    position: sticky; 
+    top: 84px; 
+    align-self: start; 
 }
 
 .meta dt {
     font: 600 12px/1 "Inter", system-ui, sans-serif;
-    letter-spacing: .12em;
-    text-transform: uppercase;
+    letter-spacing: .12em; 
+    text-transform: uppercase; 
     color: var(--navy);
     margin-top: 1rem;
-    margin-bottom: 0;
 }
 
 .meta dd {
-    margin: .35rem 0 0 0;
+    margin: .35rem 0 0 0; 
     font: 400 15px/1.6 "Inter", system-ui, sans-serif;
-    color: rgba(10, 10, 10, .8);
+    color: rgba(10, 10, 10, .82);
+}
+
+.kicker {
+    font: italic 400 16px/1 "Crimson Text", Georgia, serif;
+    text-transform: uppercase; 
+    letter-spacing: .12em; 
+    color: var(--red);
+    margin: .25rem 0 .25rem;
+}
+
+.rule { 
+    width: 72px; 
+    height: 2px; 
+    background: var(--red); 
+    margin: 8px 0 16px; 
+}
+
+.lede {
+    font: italic 400 19px/1.7 "Crimson Text", Georgia, serif;
+    color: rgba(10, 10, 10, .7); 
+    max-width: 62ch;
 }
 
 .section-title {
@@ -884,19 +905,19 @@ h1.case-title {
     text-transform: uppercase;
     letter-spacing: .01em;
     line-height: .96;
-    font-size: clamp(22px, 3.4vw, 42px);
+    font-size: clamp(22px, 3.3vw, 40px);
     color: var(--navy);
-    margin: 3.5rem 0 1rem;
+    margin: 2.5rem 0 .75rem;
     position: relative;
 }
 
 .section-title::after {
-    content: "";
-    position: absolute;
-    left: 0;
+    content: ""; 
+    position: absolute; 
+    left: 0; 
     bottom: -10px;
-    width: 64px;
-    height: 2px;
+    width: 64px; 
+    height: 2px; 
     background: var(--red);
 }
 
@@ -913,17 +934,6 @@ h1.case-title {
 
 .case li {
     margin-bottom: .4rem;
-}
-
-.lede {
-    font: italic 400 19px/1.7 "Crimson Text", Georgia, serif;
-    color: rgba(10, 10, 10, .7);
-    max-width: 62ch;
-    margin: .5rem 0 1.5rem;
-}
-
-.section {
-    margin-bottom: 3rem;
 }
 
 .secondary-email-button {
