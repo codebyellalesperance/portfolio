@@ -17,6 +17,7 @@ export default function EditorialHero() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         className="hidden md:block absolute right-[10vw] top-[32vh] w-[260px] h-[330px] z-10"
+        style={{ right: "calc(10vw - 20px)" }}
       >
         <div className="relative w-full h-full overflow-hidden rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.12)] bg-gray-200">
           <Image
